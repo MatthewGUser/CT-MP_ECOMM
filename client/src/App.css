@@ -1,0 +1,111 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #001f3f; /* Dark blue background */
+  color: #ffffff; /* White text color for readability */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #001f3f; /* Match the background color */
+  padding: 20px;
+  color: white;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #ffffff; /* Ensure headers are white */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #002244; /* Darker blue for contrast */
+  border: 1px solid #004080;
+  border-radius: 15px; /* More apparent rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff; /* Ensure text inside cards is white */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  margin: 0 10px;
+  border-radius: 15px; /* More apparent rounded corners */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #001a33; /* Even darker blue for contrast */
+  border: 1px solid #004080;
+  border-radius: 15px; /* More apparent rounded corners */
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff; /* Ensure text inside list items is white */
+}
+
+li span {
+  flex-grow: 1;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 15px; /* More apparent rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

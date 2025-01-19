@@ -1,0 +1,105 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #001f3f; /* Dark blue background */
+  color: #ffffff; /* White text color for readability */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #002244; /* Darker blue for contrast */
+  border: 1px solid #004080;
+  border-radius: 15px; /* More apparent rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff; /* Ensure text inside cards is white */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  margin: 0 10px;
+  border-radius: 15px; /* More apparent rounded corners */
+}
+
+.customer-info {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #002244; /* Darker blue for contrast */
+  border-radius: 15px; /* More apparent rounded corners */
+}
+
+.order-list {
+  background-color: #001a33; /* Even darker blue for contrast */
+  border: 1px solid #004080;
+  border-radius: 15px; /* More apparent rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff; /* Ensure text inside order list is white */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #001a33; /* Even darker blue for contrast */
+  border: 1px solid #004080;
+  border-radius: 15px; /* More apparent rounded corners */
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff; /* Ensure text inside list items is white */
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 15px; /* More apparent rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 15px; /* More apparent rounded corners */
+  border: 1px solid #ccc;
+  text-align: center;
+}
