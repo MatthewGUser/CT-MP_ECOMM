@@ -57,25 +57,13 @@ DB_PASSWORD = ""       # Replace with your database password
 DB_NAME = "ecomm"      # Replace with your database name
 ```
 
-7. Initialize the database:
-```
-flask db init
-flask db migrate -m "Initial migration."
-flask db upgrade
-```
-
-8. Start the Flask server:
-```
-flask run
-```
-
-9. Navigate to the `client` directory and install npm dependencies:
+7. Navigate to the `client` directory and install npm dependencies:
 ```
 cd client
 npm install
 ```
 
-10. Navigate back to root and start the React development server:
+8. Navigate back to root and start the React development server:
 ```
 cd ..
 npm start
