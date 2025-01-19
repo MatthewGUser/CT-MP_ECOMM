@@ -71,7 +71,8 @@ npm start
 
 ## File Structure
 ```
-e-commerce-app/
+.venv                       # Virtual environment
+CT-MP_ECOMM/
   node-modules/              # npm packages
   public/                    # Public assets (images, index.html)
   src/
