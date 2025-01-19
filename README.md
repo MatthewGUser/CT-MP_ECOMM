@@ -20,16 +20,25 @@ https://github.com/MatthewGUser/CT-MP_E-Commerce
 ### Prerequisites
 - Node.js (v14 or higher)
 - npm (v6 or higher)
+- Python (v3.8 or higher)
+- MySQL
 
 ### Steps
 1. Clone the repo
 
-`git clone https://github.com/your-username/e-commerce-app.git`
+`git clone https://github.com/MatthewGUser/CT-MP_ECOMM.git`
 
 2. Navigate into the project directory:
-`cd e-commerce-app`
+`cd CT-MP_ECOMM`
 
-3. Fill in the expected information in the `server/db.py` file:
+3. Set up the Python virtual environment and install dependencies:
+```
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+pip install -r requirements.txt
+```
+
+4. Fill in the expected information in the `server/db.py` file:
 ```
 DB_HOST = "localhost"  # Replace with your database host
 DB_USER = "root"       # Replace with your database user
@@ -37,8 +46,28 @@ DB_PASSWORD = ""       # Replace with your database password
 DB_NAME = "ecomm"      # Replace with your database name
 ```
 
-4. Start the development server:
-`npm start`
+5. Initialize the database:
+```
+flask db init
+flask db migrate -m "Initial migration."
+flask db upgrade
+```
+
+6. Start the Flask server:
+```
+flask run
+```
+
+7. Navigate to the `client` directory and install npm dependencies:
+```
+cd client
+npm install
+```
+
+8. Start the React development server:
+```
+npm start
+```
 
 ## File Structure
 ```
@@ -125,7 +154,3 @@ Manage Orders: Once a customer places an order, it will be stored and viewable i
 ## Summary
 
 The E-Commerce App is a React-based application designed to manage customers, products, and orders for an online store. Users can create and manage customer profiles, browse products, add items to a shopping cart, place orders, and view order history. The app uses the React Context API for state management and persists cart data in localStorage, making the shopping experience seamless even across sessions. The app also includes features for admins to manage products and customer details.
-
-
-
-# Keep
