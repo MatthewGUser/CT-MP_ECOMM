@@ -33,14 +33,7 @@ https://github.com/MatthewGUser/CT-MP_E-Commerce
 cd CT-MP_ECOMM
 ```
 
-3. Set up the Python virtual environment and install dependencies:
-```
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-pip install -r requirements.txt
-```
-
-4. Fill in the expected information in the `server/db.py` file:
+3. Fill in the expected information in the `server/db.py` file:
 ```
 DB_HOST = "localhost"  # Replace with your database host
 DB_USER = "root"       # Replace with your database user
@@ -48,25 +41,25 @@ DB_PASSWORD = ""       # Replace with your database password
 DB_NAME = "ecomm"      # Replace with your database name
 ```
 
-5. Initialize the database:
+4. Initialize the database:
 ```
 flask db init
 flask db migrate -m "Initial migration."
 flask db upgrade
 ```
 
-6. Start the Flask server:
+5. Start the Flask server:
 ```
 flask run
 ```
 
-7. Navigate to the `client` directory and install npm dependencies:
+6. Navigate to the `client` directory and install npm dependencies:
 ```
 cd client
 npm install
 ```
 
-8. Start the React development server:
+7. Start the React development server:
 ```
 npm start
 ```
