@@ -29,7 +29,9 @@ https://github.com/MatthewGUser/CT-MP_E-Commerce
 `git clone https://github.com/MatthewGUser/CT-MP_ECOMM.git`
 
 2. Navigate into the project directory:
-`cd CT-MP_ECOMM`
+```
+cd CT-MP_ECOMM
+```
 
 3. Set up the Python virtual environment and install dependencies:
 ```
@@ -142,8 +144,9 @@ e-commerce-app/
 * React Context API: For managing global state (customers, orders, products, and cart).
 * CSS: For styling the application.
 * Node.js: For the server-side code.
-* Express: Web framework for Node.js.
 * MySQL: Database for storing customer, product, and order data.
+* Flask: Web framework for Python.
+* SQLAlchemy: ORM for database interactions.
 ## Getting Started
 * Run the app: After installing dependencies, run the app locally using `npm start` for both client and server.
 * Create Customer Profiles: Users can create new customer profiles from the `CreateCustomerForm.jsx` page.
