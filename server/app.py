@@ -1,5 +1,7 @@
+import os
 from flask import Flask, jsonify
 from flask_cors import CORS
+from sqlalchemy import text
 from server.db import db
 from server.API.customer import customer_bp
 from server.API.order import order_bp
@@ -12,7 +14,14 @@ from server.models.order import Order
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///your_database.db'  # Update with your database URI
+
+# User-defined database configuration
+DB_HOST = "localhost"  # Replace with your database host
+DB_USER = "root"       # Replace with your database user
+DB_PASSWORD = ""       # Replace with your database password
+DB_NAME = "ecomm"      # Replace with your database name
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
@@ -39,5 +48,14 @@ def create_tables():
         db.create_all()
 
 if __name__ == '__main__':
-    create_tables()
-    app.run(debug=True)
+    with app.app_context():
+        # Test the connection
+        try:
+            with db.engine.connect() as connection:
+                connection.execute(text('SELECT 1'))
+            print('Connected to the MySQL database.')
+        except Exception as e:
+            print('Error connecting to the database:', e)
+        
+        create_tables()
+        app.run(debug=True)
